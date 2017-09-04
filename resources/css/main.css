@@ -319,6 +319,7 @@ p .boldItalic, li .boldItalic{
 .verticalMenu li{
     cursor: pointer;
     color: #fff;
+    font-size: 1.5em;
 }
 .verticalMenu li.current{
     color: #EEC559;

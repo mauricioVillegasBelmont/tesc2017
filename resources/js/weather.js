@@ -18,7 +18,7 @@ function weather( cityId, el ) {
   }
 
   function buildWeatherQuery( cityId ) {
-    const base_url = 'http://query.yahooapis.com/v1/public/yql';
+    const base_url = 'https://query.yahooapis.com/v1/public/yql';
     const query = encodeURIComponent(`select * from weather.forecast where woeid=${cityId} AND u="c"`);
     const query_url = `${base_url}?q=${query}&format=json`;
 
@@ -27,7 +27,7 @@ function weather( cityId, el ) {
 
   function buildLocationQuery( searchTerm ){
     let now = new Date();
-    let base_url = 'http://query.yahooapis.com/v1/public/yql';
+    let base_url = 'https://query.yahooapis.com/v1/public/yql';
     let query = encodeURIComponent(`select * from geo.places where text="${searchTerm}"`);
     let apiQuery = base_url + '?q='+ query +'&rnd='+ now.getFullYear() + now.getMonth() + now.getDay() + now.getHours() +'&format=json';
 
@@ -80,6 +80,8 @@ function weather( cityId, el ) {
   function getWeatherData( cityId ) {
     let query = buildWeatherQuery( cityId );
     // send request to Yahoo
+    console.log('this is the query request: '+query);
+    
     let xhr = new XMLHttpRequest();
     xhr.overrideMimeType('application/json');
     xhr.open('GET', query, true);

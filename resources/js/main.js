@@ -14,24 +14,26 @@ var pageTitle=['','title_presentacion.svg','title_objetivoGeneral.svg','title_ag
 
 
 function playAnimation(){
-    var time = 1200;
+    var time = 800;
     var img = document.getElementsByClassName('bgImages');
     var mainLogo=document.getElementById('mainLogo');
     var clickImg=document.getElementById('clickImg');
-    setInterval(function(){
-        clickImg.classList.remove('unanimated');
-        mainLogo.classList.remove('unanimated');
-    },time*img.length-1);
     for(var i = 0;i<=img.length-1;i++){
         (function(i) {
             setInterval(function(){
                 img[i].classList.remove('unanimated');
-            },time*i);
+                clickImg.classList.remove('unanimated');
+                mainLogo.classList.remove('unanimated');
+            },time);
         })(i);
     }
 }
 function registro() {
-    window.location.href="https://www.eventbrite.es/e/entradas-travesia-educativa-santillana-compartir-37507278279";
+    window.open(
+      "https://www.eventbrite.es/e/entradas-travesia-educativa-santillana-compartir-37507278279"
+      , "_blank" // <- This is what makes it open in a new window.
+    );
+  
 }
 
 
@@ -56,7 +58,7 @@ function pageIndex(){
         }else{
             video.pause();
         }
-        if(index == 3||index == 4){
+        if(index == 4){
             setCurrentContent(0);
         }
         if(index == allPages.length-1){

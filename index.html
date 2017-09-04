@@ -18,9 +18,7 @@
 	<body>
         <div id="mainWrapper" >
             <div id="body" class="">
-                <section id="portada" class="no-overflow">
-                    <img class="bgImages unanimated" style="" src="resources/img/plane-01.svg">
-                    <img class="bgImages unanimated" style="" src="resources/img/planeBlue.svg">
+                <section id="portada" class="no-overflow info">
                     <img class="bgImages unanimated" style="" src="resources/img/planeYellow.svg">
                     <div class="slideWrapper">
                         <img id="mainLogo" class="unanimated" src="resources/img/main_logo.svg">
@@ -43,14 +41,19 @@
                 </section>
                 <section id="sede" class="info ">
                     <div class="slideWrapper" style="height:auto;">
+                        
+                    </div>
+                </section>
+                <section id="loQueDebes" class="info ">
+                    <div class="slideWrapper" style="height:auto;">
                         <div class="verticalMenu" style="">
-                            <h5>Sede:</h5>
+                            <h5>Datos Importantes:</h5>
                             <ul>
-                               <li onclick="setCurrentContent(0)">
-                                   Ubicación
-                               </li>
+                                <li onclick="setCurrentContent(0)">
+                                    Ubicación
+                                </li>
                                 <li onclick="setCurrentContent(1)">
-                                    Diferencia de horarios
+                                    Horarios
                                 </li>
                                 <li onclick="setCurrentContent(2)">
                                     Clima
@@ -58,22 +61,32 @@
                                 <li onclick="setCurrentContent(3)">
                                     Gastronomia
                                 </li>
+                               <li onclick="setCurrentContent(4)">
+                                   Vestimenta
+                               </li>
+                                <li onclick="setCurrentContent(5)">
+                                    Equipaje
+                                </li>
+                                <li onclick="setCurrentContent(6)">
+                                    Pasaporte
+                                </li>
                                 
                             </ul>
                             
                         </div>
-                        <div class="elementos " style="">
-                            <div class="elemento disabled">
-                                <h5>Ubicación</h5>
+                        <div class="elementos" style="">
+                           <div class="elemento disabled">
+                                <h2>Ubicación:</h2>
+                                <h4>Bogotá, Colombia</h4>
                                 <div style="widht:100%; height: 600px;">
                                     <div id="map"></div>
                                 </div>
                                 
                             </div>
                             <div class="elemento disabled">
-                               <h5>Diferencia de horarios</h5>
+                               <h2>Horarios:</h2>
                                     <div class="clock" style="float:left;"> 
-                                        <h2><span style="color:gray;">Hora actual en</span>México, CDMX</h2>
+                                        <h2><span style="color:gray;">Hora actual en</span>CDMX, México </h2>
                                         <div id="mexicoDate" class="dateLabel" style="font-size:1.5em;"></div>
                                         <div id="mexicoTime" class="timeLabel" style=""></div>
                                     </div>
@@ -84,7 +97,7 @@
                                     </div>
                             </div>
                             <div class="elemento disabled">
-                               <h5>Clima</h5>
+                               <h2>Clima</h2>
                                 <div style="width:100%; height:100%; padding:2%;">
                                     <div id="x" class="container" style="display:none;">
                                         <form action="" id="weather-form">
@@ -103,9 +116,9 @@
                                 </div>
                             </div>
                             <div class="elemento disabled" style="padding:25px 2%;">
-                               <h5>Gastronomia</h5>
+                               <h2>Gastronomia</h2>
                                <img src="resources/img/gastro00.jpg">
-                               <p>Cómo visitar Colombia sin probar su gastronomía? Este hermoso país por su diversidad de climas y paisajes es un lugar con tierra fértil donde se crían diferentes tipos de frutas, verduras y otros animales se cultivan, esta fuerza nos da variedad de deliciosos platos.</p>
+                               <p>¿Cómo visitar Colombia sin probar su gastronomía? Este hermoso país por su diversidad de climas y paisajes es un lugar con tierra fértil donde se crían diferentes tipos de frutas, verduras y otros animales se cultivan, esta fuerza nos da variedad de deliciosos platos.</p>
                                <h6>1. BANDEJA PAISA:</h6>
                                <img src="resources/img/gastro01.jpg">
                                <p>Un plato típico de la zona de Antioquia, a condición de 9 ingredientes: arroz, huevos, salchichas, carne picada, aguacate, plátano, carne de cerdo, frijoles y pan de maíz y aunque los Paisas son sus mayores consumidores de cualquier parte del país puede encontrar este delicioso plato. En una visita a Medellín , comer una bandeja paisa es algo que no se puede perder. Aquí tienes una guía con algunos de los mejores restaurantes de Medellín .</p>
@@ -138,30 +151,8 @@
                                <p>Gracias a que tenemos costas del Atlántico y del Pacífico de la cantidad de peces es abundante y se puede comer en varias preparaciones y variedades: salsa de Bagre, viudo de pescado, mojarra frita o asada, si se viaja a la costa no se pierda el pescado fresco.</p>
                                <p style="margin-bottom:50px;">En Colombia, la variedad es extensa y describir a 10 platos es difícil, por lo que desde hace recomendaciones, no deje de probar: la arepa, el buñuelo, buñuelo, pastel, pastel de yuca y el par de un buen café colombiano o una aguadepanela caliente.</p>
                             </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="loQueDebes" class="info ">
-                    <div class="slideWrapper" style="height:auto;">
-                        <div class="verticalMenu" style="">
-                            <h5>Datos Importantes:</h5>
-                            <ul>
-                               <li onclick="setCurrentContent(0)">
-                                   Vestimenta
-                               </li>
-                                <li onclick="setCurrentContent(1)">
-                                    Equipaje
-                                </li>
-                                <li onclick="setCurrentContent(2)">
-                                    Pasaporte
-                                </li>
-                                
-                            </ul>
-                            
-                        </div>
-                        <div class="elementos" style="">
                             <div class="elemento disabled">
-                                <h5>Código de Vestimenta</h5>
+                                <h2>Código de Vestimenta</h2>
                                 <br>
                                 <p><b>Día 1:</b> Conferencias</p>
                                 <p>Business Casual</p>
@@ -183,12 +174,12 @@
                                 <p>Vestimenta libre</p>
                             </div>
                             <div class="elemento disabled">
-                               <h5>Revisa los términos y políticas de equipaje para:</h5>
-                                    <p><b>Aeroméxico:</b> <a href="https://world.aeromexico.com/es/viaja-con-aeromexico/equipaje/centroamerica/?site=mx">aquí</a></p>
-                                    <p><b>Interjet:</b> <a href="https://www.interjet.com.mx/terminos-condiciones-servicio.aspx">aquí</a></p>
+                               <h2>Revisa los términos y políticas de equipaje para:</h2>
+                                <p><b>Aeroméxico:</b> <a target="_blank" href="https://world.aeromexico.com/es/viaja-con-aeromexico/equipaje/centroamerica/?site=mx">aquí</a></p>
+                                <p><b>Interjet:</b> <a target="_blank" href="https://www.interjet.com.mx/terminos-condiciones-servicio.aspx">aquí</a></p>
                             </div>
                             <div class="elemento disabled">
-                               <h5>Pasaporte</h5>
+                               <h2>Pasaporte</h2>
                                <img src="resources/img/Pasaporte.jpg">
                                <p>Es importante contar con tu pasaporte vigente para el viaje y verifica que vaya a tener vigencia de más de 6 meses mientras estés fuera del país, de no ser así asegúrate de tramitarlo a tiempo en la Secretaria de Relaciones Exteriores más cercana a ti o visita: <a href="https://consulmex.sre.gob.mx/houston/index.php/servicios-consulares/pasaporte-mexicano">consulmex.sre.gob.mx</a></p>
                             </div>
@@ -199,7 +190,7 @@
                     <div class="slideWrapper" style="height:100%;">
                         <div id="passworContainer">
                             <img id="" class="" src="resources/img/logo.svg">
-                            <p>registrate dando click aquí:</p>
+                            <p>Para registrarte haz clic aquí:</p>
                             <input id="button" type="button" value="Registrarse" onclick="registro()">
                         </div>
                     </div>
@@ -207,15 +198,15 @@
             </div>
             <div id="header">
                 <div>
-                    <p>lo que deves de saber:</p>
+                
                 </div>
                 <div class="menu">
                     <p></p>
-                    <p onclick="goTo(slides,1)">Travesia</p>
-                    <p onclick="goTo(slides,2)">Bogóta</p>
-                    <p onclick="goTo(slides,3)">Sede</p>
+                    <p onclick="goTo(slides,1)">Travesía</p>
+                    <p onclick="goTo(slides,2)">Bogotá</p>
+                    <p onclick="goTo(slides,3)">Hotel Sede</p>
                     <p onclick="goTo(slides,4)">Datos Importantes</p>
-                    <p onclick="goTo(slides,5)">registro</p>
+                    <p onclick="goTo(slides,5)">Registro</p>
                 </div>
             </div>
             <img id="ant" class="horizontalNav" src="resources/img/back.png">
