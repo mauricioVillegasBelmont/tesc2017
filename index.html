@@ -45,57 +45,29 @@
                     </div>
                 </section>
                 <section id="loQueDebes" class="info ">
-                    <div class="slideWrapper" style="height:auto;">
-                        <div class="verticalMenu" style="">
-                            <h5>Datos Importantes:</h5>
-                            <ul>
-                                <li onclick="setCurrentContent(0)">
-                                    Ubicación
-                                </li>
-                                <li onclick="setCurrentContent(1)">
-                                    Horarios
-                                </li>
-                                <li onclick="setCurrentContent(2)">
-                                    Clima
-                                </li>
-                                <li onclick="setCurrentContent(3)">
-                                    Gastronomia
-                                </li>
-                               <li onclick="setCurrentContent(4)">
-                                   Vestimenta
-                               </li>
-                                <li onclick="setCurrentContent(5)">
-                                    Equipaje
-                                </li>
-                                <li onclick="setCurrentContent(6)">
-                                    Pasaporte
-                                </li>
-                                
-                            </ul>
-                            
-                        </div>
+                    <div class="slideWrapper" style="height:auto; padding:1%;">
                         <div class="elementos" style="">
                            <div class="elemento disabled">
                                 <h2>Ubicación:</h2>
                                 <h4>Bogotá, Colombia</h4>
-                                <div style="widht:100%; height: 600px;">
+                                <div style="width:95%; height:600px; margin-bottom: 25px;">
                                     <div id="map"></div>
                                 </div>
                                 
                             </div>
                             <div class="elemento disabled">
                                <h2>Horarios:</h2>
-                                <div class="clock" style="float:left;"> 
+                                <div class="clock" style="float:left; heigt:auto;"> 
                                     <canvas id="analog_clock" width="300" height="300">
                                         Sorry, canvas is not supported in this browser.
                                     </canvas>
                                 </div>
                                 <div class="clock" style="float:left; border-left:1px solid #afafaf;"> 
-                                    <h2><span style="color:gray;">Hora actual en</span>CDMX, México </h2>
+                                    <h3><span style="color:gray;">Hora actual en</span>CDMX, México </h3>
                                     <div id="mexicoDate" class="dateLabel" style="font-size:1.5em; "></div>
                                     <div id="mexicoTime" class="timeLabel" style=""></div>
                                     <hr style="width:50%; margin:50px auto;">
-                                    <h2><span style="color:gray;">Hora actual en</span>Bogotá, Colombia</h2>
+                                    <h3><span style="color:gray;">Hora actual en</span>Bogotá, Colombia</h3>
                                     <div id="bogotaDate" class="dateLabel" style="font-size:1.5em;"></div>
                                     <div id="bogotaTime" class="timeLabel" style=""></div>
                                 </div>
@@ -119,8 +91,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="elemento disabled" style="padding:25px 2%;">
-                               <h2>Gastronomia</h2>
+                            <div class="elemento disabled" style="">
+                               <h2>Gastronomía</h2>
                                <img src="resources/img/gastro00.jpg">
                                <p>¿Cómo visitar Colombia sin probar su gastronomía? Este hermoso país por su diversidad de climas y paisajes es un lugar con tierra fértil donde se crían diferentes tipos de frutas, verduras y otros animales se cultivan, esta fuerza nos da variedad de deliciosos platos.</p>
                                <h6>1. BANDEJA PAISA:</h6>
@@ -148,7 +120,6 @@
                                
                                <p>Una vez más una sopa, siendo una preparación cundiboyasense toma algunas de las cosas que se cultivan en la región como habas, nabos, cubios entre otras cosas, la carne que hizo que el plato es la carne de callos sopa que aunque muy diferentes de sus ingredientes tiene un sabor delicioso.</p>
                                <h6>9. FLANCO:</h6>
-                               <img src="resources/img/gastro09.jpg">
                                <p>Puede ser asado o criollo salsa (salsa a base de tomate, cebolla, pimentón y cilantro), el bistec de falda es un corte de carne que debe ser cocido durante varias horas, pero es después tierna y deliciosa, la carne hijo dar una textura especial.</p>
                                <h6>10. PESCADO:</h6>
                                <img src="resources/img/gastro10.jpg">
@@ -158,35 +129,80 @@
                             <div class="elemento disabled">
                                 <h2>Código de Vestimenta</h2>
                                 <br>
-                                <p><b>Día 1:</b> Conferencias</p>
-                                <p><i>Business Casual</i></p>
-                                <p><b>Mujeres:</b> Traje sastre o pantalón/falda de vestir.</p>
-                                <p><b>Hombres:</b> Pantalón de vestir, camisa, zapato o mocasín.</p>
+                                <div class="hoverBox">
+                                    <p><b>Día 1:</b> Conferencias</p>
+                                    <div style="padding-left:20px;">
+                                        <p><i>Business Casual</i></p>
+                                        <p><b>Mujeres:</b> Traje sastre o pantalón/falda de vestir.</p>
+                                        <p><b>Hombres:</b> Pantalón de vestir, camisa, zapato o mocasín.</p>
+                                    </div>
+                                </div>
+                                <hr style="width:20%; margin:0 20px;">
+                                <div class="hoverBox">
+                                    <p><b>Día 2:</b> Visita a Colegios</p>
+                                    <div style="padding-left:20px;">
+                                        <p><b>Mujeres y hombres:</b> Vestimenta formal <i>(apropiada).</i></p>
+                                        <p><i>NO JEANS- NO TENNIS</i></p>
+                                    </div>
+                                </div>
                                 <br>
-                                <hr>
-                                <p><b>Día 2:</b> Visita a Colegios</p>
-                                <p><b>Mujeres y hombres:</b> Vestimenta formal (apropiada).</p>
-                                <p><i>NO JEANS- NO TENNIS</i></p>
+                                <hr style="width:20%; margin:0 20px;">
+                                <div class="hoverBox">
+                                    <p><b>Día 3:</b> Recorrido Turístico</p>
+                                    <div style="padding-left:20px;">
+                                        <p><i>Ropa cómoda</i></p>
+                                        <p><b>Sugerencias:</b> Llevar abrigo, paraguas.</p>
+                                    </div>
+                                </div>
                                 <br>
-                                <hr>
-                                <p><b>Día 3:</b> Recorrido Turístico</p>
-                                <p><i>Ropa cómoda</i></p>
-                                <p><b>Sugerencias:</b> Llevar abrigo, paraguas.</p>
-                                <br>
-                                <hr>
-                                <p><b>Día 4:</b> Regreso a destinos</p>
-                                <p><i>Vestimenta libre</i></p>
+                                <hr style="width:20%; margin:0 20px;">
+                                <div class="hoverBox">
+                                    <p><b>Día 4:</b> Regreso a destinos</p>
+                                    <div style="padding-left:20px;">
+                                        <p><i>Vestimenta libre</i></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="elemento disabled">
                                <h2>Revisa los términos y políticas de equipaje para:</h2>
-                                <p><b>Aeroméxico:</b> <a target="_blank" href="https://world.aeromexico.com/es/viaja-con-aeromexico/equipaje/centroamerica/?site=mx">aquí</a></p>
-                                <p><b>Interjet:</b> <a target="_blank" href="https://www.interjet.com.mx/terminos-condiciones-servicio.aspx">aquí</a></p>
+                                <div class="slideWrapper">
+                                    <button id="aeromexico" class="button" onclick="aeromexico()"><img src="resources/img/aerolineaLogo-01.svg"> haz clic aquí</button>
+                                    <button id="interjet" class="button" onclick="interjet()"><img src="resources/img/aerolineaLogo-02.svg"> haz clic aquí</button>
+                                </div>
                             </div>
                             <div class="elemento disabled">
                                <h2>Pasaporte</h2>
                                <img src="resources/img/Pasaporte.jpg">
                                <p>Es importante contar con tu pasaporte vigente para el viaje y verifica que vaya a tener vigencia de más de 6 meses mientras estés fuera del país, de no ser así asegúrate de tramitarlo a tiempo en la Secretaria de Relaciones Exteriores más cercana a ti o visita: <a href="https://consulmex.sre.gob.mx/houston/index.php/servicios-consulares/pasaporte-mexicano">consulmex.sre.gob.mx</a></p>
                             </div>
+                        </div>
+                        <div class="verticalMenu" style="">
+                            <h5>Datos Importantes:</h5>
+                            <ul>
+                                <li onclick="setCurrentContent(0)">
+                                    Ubicación
+                                </li>
+                                <li onclick="setCurrentContent(1)">
+                                    Horarios
+                                </li>
+                                <li onclick="setCurrentContent(2)">
+                                    Clima
+                                </li>
+                                <li onclick="setCurrentContent(3)">
+                                    Gastronomía
+                                </li>
+                               <li onclick="setCurrentContent(4)">
+                                   Vestimenta
+                               </li>
+                                <li onclick="setCurrentContent(5)">
+                                    Equipaje
+                                </li>
+                                <li onclick="setCurrentContent(6)">
+                                    Pasaporte
+                                </li>
+                                
+                            </ul>
+                            
                         </div>
                     </div>
                 </section>

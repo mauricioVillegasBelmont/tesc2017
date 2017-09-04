@@ -28,13 +28,8 @@ function playAnimation(){
         })(i);
     }
 }
-function registro() {
-    window.open(
-      "https://www.eventbrite.es/e/entradas-travesia-educativa-santillana-compartir-37507278279"
-      , "_blank" // <- This is what makes it open in a new window.
-    );
-  
-}
+
+
 
 
 function pageIndex(){
@@ -190,6 +185,28 @@ function scrollBottom(){
         });*/
 }
 /*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+function aeromexico(){
+    window.open(
+      "https://world.aeromexico.com/es/viaja-con-aeromexico/equipaje/centroamerica/?site=mx"
+      , "_blank" // <- This is what makes it open in a new window.
+    );
+}
+function interjet(){
+    window.open(
+      "https://www.interjet.com.mx/terminos-condiciones-servicio.aspx"
+      , "_blank" // <- This is what makes it open in a new window.
+    );
+}
+function registro() {
+    window.open(
+      "https://www.eventbrite.es/e/entradas-travesia-educativa-santillana-compartir-37507278279"
+      , "_blank" // <- This is what makes it open in a new window.
+    );
+}
+
+/*------------------------------------------------------------*/
+
 /*------------------------------------------------------------*/
     
 document.addEventListener('DOMContentLoaded', function(){

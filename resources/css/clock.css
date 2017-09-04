@@ -27,6 +27,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 50%;
+    height: 50%;
+    min-height: 300px;
+    min-width: 300px;
+    max-height: 500px;
+    max-width: 500px;
     -webkit-transform:  translateX(-50%);
     -ms-    transform:  translateX(-50%);
             transform:  translateX(-50%);
