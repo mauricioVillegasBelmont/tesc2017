@@ -1,0 +1,494 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>TRAVESÍA EDUCATIVA SANTILLANA COMPARTIR</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<link rel="icon" href="resources/img/favicon-01.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="resources/img/favicon-01.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="resources/css/colorPallete.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/main.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/weather-icons.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/weatherStyle.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/clock.css">
+	</head>
+
+	<body>
+        <div id="mainWrapper" >
+            <div id="body" class="">
+                <section id="portada" class="no-overflow">
+                    <img class="bgImages unanimated" style="" src="resources/img/plane-01.svg">
+                    <img class="bgImages unanimated" style="" src="resources/img/planeBlue.svg">
+                    <img class="bgImages unanimated" style="" src="resources/img/planeYellow.svg">
+                    <div class="slideWrapper">
+                        <img id="mainLogo" class="unanimated" src="resources/img/main_logo.svg">
+                        <img id="clickImg" class="unanimated" src="resources/img/clickToContinue.svg">
+                    </div>
+                </section>
+                <section id="" class="info">
+                    <div class="slideWrapper">
+                        <img id="inflog" class="content" src="resources/img/logo.svg">
+                    </div>
+                        <img id="agenda" class="content" src="resources/img/agenda.svg">
+                </section>
+                <section class="blackBg">
+                   <div class="video ">
+                       
+                        <video id="bogota" autoplay mute loop controls>
+                            <source src="resources/video/BogotaSuperatusExpectativas.mp4">
+                        </video>
+                   </div>
+                </section>
+                <section id="sede" class="info ">
+                    <div class="slideWrapper" style="height:auto;">
+                        <div class="verticalMenu" style="">
+                            <h5>Sede:</h5>
+                            <ul>
+                               <li onclick="setCurrentContent(0)">
+                                   Ubicación
+                               </li>
+                                <li onclick="setCurrentContent(1)">
+                                    Diferencia de horarios
+                                </li>
+                                <li onclick="setCurrentContent(2)">
+                                    Clima
+                                </li>
+                                <li onclick="setCurrentContent(3)">
+                                    Gastronomia
+                                </li>
+                                
+                            </ul>
+                            
+                        </div>
+                        <div class="elementos " style="">
+                            <div class="elemento disabled">
+                                <h5>Ubicación</h5>
+                                <div style="widht:100%; height: 600px;">
+                                    <div id="map"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="elemento disabled">
+                               <h5>Diferencia de horarios</h5>
+                                    <div class="clock" style="float:left;"> 
+                                        <h2><span style="color:gray;">Hora actual en</span>México, CDMX</h2>
+                                        <div id="mexicoDate" class="dateLabel" style="font-size:1.5em;"></div>
+                                        <div id="mexicoTime" class="timeLabel" style=""></div>
+                                    </div>
+                                    <div class="clock" style="float:left;"> 
+                                        <h2><span style="color:gray;">Hora actual en</span>Bogotá, Colombia</h2>
+                                        <div id="bogotaDate" class="dateLabel" style="font-size:1.5em;"></div>
+                                        <div id="bogotaTime" class="timeLabel" style=""></div>
+                                    </div>
+                            </div>
+                            <div class="elemento disabled">
+                               <h5>Clima</h5>
+                                <div style="width:100%; height:100%; padding:2%;">
+                                    <div id="x" class="container" style="display:none;">
+                                        <form action="" id="weather-form">
+                                            <label for="search">Search for a city:</label><br>
+                                            <input type="text" placeholder="Search for a city" id="search">
+                                        </form>
+                                        <ul id="locations"></ul>
+                                    </div>
+                                    <div class="container">
+                                        <div id="weather" class="grid"></div>
+                                        <h3>Pronostico:</h3>
+                                        <div id="forecast" class="grid"></div>
+                                    </div>
+                                    <div class="container">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elemento disabled" style="padding:25px 2%;">
+                               <h5>Gastronomia</h5>
+                               <img src="resources/img/gastro00.jpg">
+                               <p>Cómo visitar Colombia sin probar su gastronomía? Este hermoso país por su diversidad de climas y paisajes es un lugar con tierra fértil donde se crían diferentes tipos de frutas, verduras y otros animales se cultivan, esta fuerza nos da variedad de deliciosos platos.</p>
+                               <h6>1. BANDEJA PAISA:</h6>
+                               <img src="resources/img/gastro01.jpg">
+                               <p>Un plato típico de la zona de Antioquia, a condición de 9 ingredientes: arroz, huevos, salchichas, carne picada, aguacate, plátano, carne de cerdo, frijoles y pan de maíz y aunque los Paisas son sus mayores consumidores de cualquier parte del país puede encontrar este delicioso plato. En una visita a Medellín , comer una bandeja paisa es algo que no se puede perder. Aquí tienes una guía con algunos de los mejores restaurantes de Medellín .</p>
+                               <h6>2. AJIACO:</h6>
+                               <img src="resources/img/gastro02.jpg">
+                               <p>Una sopa muy popular en la capital colombiana , compuesto de 3 tipos diferentes de papas, maíz, pollo, guisantes, zanahorias, y su guasca ingrediente esencial que es una hierba aromática que le da el sabor especial, principalmente, que se puede encontrar en Bogotá y algunos ciudades en el departamento de Cundinamarca. Ajiaco es uno de los principales platos de Bogotá gastronomía .</p>
+                               <h6>3. TAMAL:</h6>
+                               <img src="resources/img/gastro03.jpg">
+                               <p>Hecho de arroz, harina de color amarillo o blanco, carne de cerdo, pollo, huevo, zanahoria, a veces, guisantes, patatas y envuelto y cocinado en hojas de plátano es ideal para un buen desayuno o una onces de la tarde, hay diferentes versiones con cambio de algunos ingredientes, dependiendo de la región puede ser llamado hallaca tamal o una combinación de sabores que no se puede perder. Si se encuentra en Bogotá, uno de los mejores lugares para probar que está en la puerta de atrás, un restaurante tradicional cerca de la Plaza de Bolívar. Visita el centro de la ciudad es uno de los planes recomendados que se puede hacer en Bogotá .</p>
+                               <h6>4. EL SANCOCHO:</h6>
+                               <img src="resources/img/gastro04.jpg">
+                               <p>Los colombianos son un montón de sopas. Esta es una sopa que se hace con diferentes tipos de carne puede ser carne de res, cerdo o pollo o incluso todos juntos en un plato, además de patata, plátano verde, yuca y maíz Una preparación sencilla es conocida en todo el país y que hará las delicias del paladar .</p>
+                               <h6>5. LECHONA TOLIMENSE:</h6>
+                               <img src="resources/img/gastro05.jpg">
+                               <p>Este puede ser uno de los platos más divertidos si usted es un extranjero que visita Colombia, es un plato hecho de arroz y carne de cerdo, junto con los guisantes y las especias se ha elaborado de piel de cerdo y su presentación incluye la cabeza, aunque muy particular delicia gastronómica.</p>
+                               <h6>6. ARROZ CON COCO:</h6>
+                               <img src="resources/img/gastro06.jpg">
+                               <p>Aunque es muy popular en el área del Caribe y de la costa, es posible encontrar en un restaurante en el interior del país donde se vende pescado, ya que es el acompañamiento perfecto, una preparación de arroz, coco, cola o leche de coco, con textura interesante y un sabor único. Aquí presentamos algunos de los mejores restaurantes de Cartagena , donde seguramente encontrará este plato.</p>
+                               <h6>7. ARROZ CON POLLO:</h6>
+                               <img src="resources/img/gastro07.jpg">
+                               <p>Es algo así como la paella de fama mundial, pero sólo mariscos pollo, su consistencia es similar y se prepara con arroz, guisantes, zanahoria, pimentón, cebolla, chorizo y frijoles, se pueden encontrar en cualquier región de Colombia.</p>
+                               <h6>8. LA CHIQUITA ZAMORRA:</h6>
+                               <img src="resources/img/gastro08.jpg">
+                               <p>Una vez más una sopa, siendo una preparación cundiboyasense toma algunas de las cosas que se cultivan en la región como habas, nabos, cubios entre otras cosas, la carne que hizo que el plato es la carne de callos sopa que aunque muy diferentes de sus ingredientes tiene un sabor delicioso.</p>
+                               <h6>9. FLANCO:</h6>
+                               <img src="resources/img/gastro09.jpg">
+                               <p>Puede ser asado o criollo salsa (salsa a base de tomate, cebolla, pimentón y cilantro), el bistec de falda es un corte de carne que debe ser cocido durante varias horas, pero es después tierna y deliciosa, la carne hijo dar una textura especial.</p>
+                               <h6>10. PESCADO:</h6>
+                               <img src="resources/img/gastro10.jpg">
+                               <p>Gracias a que tenemos costas del Atlántico y del Pacífico de la cantidad de peces es abundante y se puede comer en varias preparaciones y variedades: salsa de Bagre, viudo de pescado, mojarra frita o asada, si se viaja a la costa no se pierda el pescado fresco.</p>
+                               <p style="margin-bottom:50px;">En Colombia, la variedad es extensa y describir a 10 platos es difícil, por lo que desde hace recomendaciones, no deje de probar: la arepa, el buñuelo, buñuelo, pastel, pastel de yuca y el par de un buen café colombiano o una aguadepanela caliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="loQueDebes" class="info ">
+                    <div class="slideWrapper" style="height:auto;">
+                        <div class="verticalMenu" style="">
+                            <h5>Datos Importantes:</h5>
+                            <ul>
+                               <li onclick="setCurrentContent(0)">
+                                   Vestimenta
+                               </li>
+                                <li onclick="setCurrentContent(1)">
+                                    Equipaje
+                                </li>
+                                <li onclick="setCurrentContent(2)">
+                                    Pasaporte
+                                </li>
+                                
+                            </ul>
+                            
+                        </div>
+                        <div class="elementos" style="">
+                            <div class="elemento disabled">
+                                <h5>Código de Vestimenta</h5>
+                                <br>
+                                <p><b>Día 1:</b> Conferencias</p>
+                                <p>Business Casual</p>
+                                <p>Mujeres: Traje sastre o pantalón/falda de vestir.</p>
+                                <p>Hombres: Pantalón de vestir, camisa, zapato o mocasín.</p>
+                                <br>
+                                <hr>
+                                <p><b>Día 2:</b> Visita a Colegios</p>
+                                <p>Mujeres y hombres: Vestimenta formal (apropiada).</p>
+                                <p>NO JEANS- NO TENNIS</p>
+                                <br>
+                                <hr>
+                                <p><b>Día 3:</b> Recorrido Turístico</p>
+                                <p>Ropa cómoda</p>
+                                <p>Sugerencias: Llevar abrigo, paraguas.</p>
+                                <br>
+                                <hr>
+                                <p><b>Día 4:</b> Regreso a destinos</p>
+                                <p>Vestimenta libre</p>
+                            </div>
+                            <div class="elemento disabled">
+                               <h5>Revisa los términos y políticas de equipaje para:</h5>
+                                    <p><b>Aeroméxico:</b> <a href="https://world.aeromexico.com/es/viaja-con-aeromexico/equipaje/centroamerica/?site=mx">aquí</a></p>
+                                    <p><b>Interjet:</b> <a href="https://www.interjet.com.mx/terminos-condiciones-servicio.aspx">aquí</a></p>
+                            </div>
+                            <div class="elemento disabled">
+                               <h5>Pasaporte</h5>
+                               <p>Es importante contar con tu pasaporte vigente para el viaje y verifica que vaya a tener vigencia de más de 6 meses mientras estés fuera del país, de no ser así asegúrate de tramitarlo a tiempo en la Secretaria de Relaciones Exteriores más cercana a ti o visita: <a href="https://consulmex.sre.gob.mx/houston/index.php/servicios-consulares/pasaporte-mexicano">consulmex.sre.gob.mx</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="registro" class="info">
+                    <div class="slideWrapper" style="height:100%;">
+                        <div id="passworContainer">
+                            <img id="" class="" src="resources/img/logo.svg">
+                            <p>registrate dando click aquí:</p>
+                            <input id="button" type="button" value="Registrarse" onclick="registro()">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="header">
+                <div>
+                    <p>lo que deves de saber:</p>
+                </div>
+                <div class="menu">
+                    <p></p>
+                    <p onclick="goTo(slides,1)">Travesia</p>
+                    <p onclick="goTo(slides,2)">Bogóta</p>
+                    <p onclick="goTo(slides,3)">Sede</p>
+                    <p onclick="goTo(slides,4)">Datos Importantes</p>
+                    <p onclick="goTo(slides,5)">registro</p>
+                </div>
+            </div>
+            <img id="ant" class="horizontalNav" src="resources/img/back.png">
+            <img id="sig" class="horizontalNav" src="resources/img/next.png">
+        </div>
+        <div id="start" onclick="activate()"></div>
+        <script type="text/javascript" src="resources/js/main.js"></script>
+        <script type="text/javascript" src="resources/js/clock.js"></script>
+        <!--<script type="text/javascript" src="resources/js/moment-timezone.js"></script>
+        <script type="text/javascript" src="resources/js/moment-timezone-with-data.js"></script>-->
+        <script>
+          function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: {lat: 4.609866, lng: -74.08205}
+              });
+            }
+        </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHqrvz24b_cgRkpLH1AUm2-UBjcEDas30&callback=initMap&language=es&region=mx"
+    async defer>
+    </script>
+    <script src="resources/js/weather.js"></script>
+  <script>
+    const icons = {
+      "codes": [
+        {
+          "class": "wi-tornado",
+          "number": "0",
+          "description": "tornado"
+        },
+        {
+          "class": "wi-hurricane",
+          "number": "1",
+          "description": "tropical storm"
+        },
+        {
+          "class": "wi-hurricane",
+          "number": "2",
+          "description": "hurricane"
+        },
+        {
+          "class": "wi-thunderstorm",
+          "number": "3",
+          "description": "severe thunderstorms"
+        },
+        {
+          "class": "wi-thunderstorm",
+          "number": "4",
+          "description": "thunderstorms"
+        },
+        {
+          "class": "wi-rain-mix",
+          "number": "5",
+          "description": "mixed rain and snow"
+        },
+        {
+          "class": "wi-sleet",
+          "number": "6",
+          "description": "mixed rain and sleet"
+        },
+        {
+          "class": "wi-rain-mix",
+          "number": "7",
+          "description": "mixed snow and sleet"
+        },
+        {
+          "class": "wi-snow-wind",
+          "number": "8",
+          "description": "freezing drizzle"
+        },
+        {
+          "class": "wi-sprinkle",
+          "number": "9",
+          "description": "drizzle"
+        },
+        {
+          "class": "wi-rain-wind",
+          "number": "10",
+          "description": "freezing rain"
+        },
+        {
+          "class": "wi-showers",
+          "number": "11",
+          "description": "showers"
+        },
+        {
+          "class": "wi-rain",
+          "number": "12",
+          "description": "showers"
+        },
+        {
+          "class": "wi-snow",
+          "number": "13",
+          "description": "snow flurries"
+        },
+        {
+          "class": "wi-rain-mix",
+          "number": "14",
+          "description": "light snow showers"
+        },
+        {
+          "class": "wi-snow-wind",
+          "number": "15",
+          "description": "blowing snow"
+        },
+        {
+          "class": "wi-snow",
+          "number": "16",
+          "description": "snow"
+        },
+        {
+          "class": "wi-hail",
+          "number": "17",
+          "description": "hail"
+        },
+        {
+          "class": "wi-sleet",
+          "number": "18",
+          "description": "sleet"
+        },
+        {
+          "class": "wi-dust",
+          "number": "19",
+          "description": "dust"
+        },
+        {
+          "class": "wi-fog",
+          "number": "20",
+          "description": "foggy"
+        },
+        {
+          "class": "wi-day-haze",
+          "number": "21",
+          "description": "haze"
+        },
+        {
+          "class": "wi-smoke",
+          "number": "22",
+          "description": "smoky"
+        },
+        {
+          "class": "wi-strong-wind",
+          "number": "23",
+          "description": "blustery"
+        },
+        {
+          "class": "wi-windy",
+          "number": "24",
+          "description": "windy"
+        },
+        {
+          "class": "wi-snowflake-cold",
+          "number": "25",
+          "description": "cold"
+        },
+        {
+          "class": "wi-cloudy",
+          "number": "26",
+          "description": "cloudy"
+        },
+        {
+          "class": "wi-night-cloudy",
+          "number": "27",
+          "description": "mostly cloudy (night)"
+        },
+        {
+          "class": "wi-day-cloudy",
+          "number": "28",
+          "description": "mostly cloudy (day)"
+        },
+        {
+          "class": "wi-night-partly-cloudy",
+          "number": "29",
+          "description": "partly cloudy (night)"
+        },
+        {
+          "class": "wi-day-cloudy",
+          "number": "30",
+          "description": "partly cloudy (day)"
+        },
+        {
+          "class": "wi-night-clear",
+          "number": "31",
+          "description": "clear (night)"
+        },
+        {
+          "class": "wi-day-sunny",
+          "number": "32",
+          "description": "sunny"
+        },
+        {
+          "class": "wi-night-cloudy",
+          "number": "33",
+          "description": "fair (night)"
+        },
+        {
+          "class": "wi-day-sunny-overcast",
+          "number": "34",
+          "description": "fair (day)"
+        },
+        {
+          "class": "wi-hail",
+          "number": "35",
+          "description": "mixed rain and hail"
+        },
+        {
+          "class": "wi-hot",
+          "number": "36",
+          "description": "hot"
+        },
+        {
+          "class": "wi-day-thunderstorm",
+          "number": "37",
+          "description": "isolated thunderstorms"
+        },
+        {
+          "class": "wi-day-thunderstorm",
+          "number": "38",
+          "description": "scattered thunderstorms"
+        },
+        {
+          "class": "wi-rain",
+          "number": "39",
+          "description": "scattered thunderstorms"
+        },
+        {
+          "class": "wi-rain",
+          "number": "40",
+          "description": "scattered showers"
+        },
+        {
+          "class": "wi-snow",
+          "number": "41",
+          "description": "heavy snow"
+        },
+        {
+          "class": "wi-rain-mix",
+          "number": "42",
+          "description": "scattered snow showers"
+        },
+        {
+          "class": "wi-snow",
+          "number": "43",
+          "description": "heavy snow"
+        },
+        {
+          "class": "wi-day-cloudy",
+          "number": "44",
+          "description": "partly cloudy"
+        },
+        {
+          "class": "wi-storm-showers",
+          "number": "45",
+          "description": "thundershowers"
+        },
+        {
+          "class": "wi-rain-mix",
+          "number": "46",
+          "description": "snow showers"
+        },
+        {
+          "class": "wi-storm-showers",
+          "number": "47",
+          "description": "isolated thundershowers"
+        },
+        {
+          "class": "wi-horizon",
+          "number": "3200",
+          "description": "not available"
+        }
+      ]
+    };
+    var bogota = '368148';
+    weather( bogota, 'weather' );
+  </script>
+	</body>
+</html>
