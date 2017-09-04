@@ -85,16 +85,20 @@
                             </div>
                             <div class="elemento disabled">
                                <h2>Horarios:</h2>
-                                    <div class="clock" style="float:left;"> 
-                                        <h2><span style="color:gray;">Hora actual en</span>CDMX, México </h2>
-                                        <div id="mexicoDate" class="dateLabel" style="font-size:1.5em;"></div>
-                                        <div id="mexicoTime" class="timeLabel" style=""></div>
-                                    </div>
-                                    <div class="clock" style="float:left;"> 
-                                        <h2><span style="color:gray;">Hora actual en</span>Bogotá, Colombia</h2>
-                                        <div id="bogotaDate" class="dateLabel" style="font-size:1.5em;"></div>
-                                        <div id="bogotaTime" class="timeLabel" style=""></div>
-                                    </div>
+                                <div class="clock" style="float:left;"> 
+                                    <canvas id="analog_clock" width="300" height="300">
+                                        Sorry, canvas is not supported in this browser.
+                                    </canvas>
+                                </div>
+                                <div class="clock" style="float:left; border-left:1px solid #afafaf;"> 
+                                    <h2><span style="color:gray;">Hora actual en</span>CDMX, México </h2>
+                                    <div id="mexicoDate" class="dateLabel" style="font-size:1.5em; "></div>
+                                    <div id="mexicoTime" class="timeLabel" style=""></div>
+                                    <hr style="width:50%; margin:50px auto;">
+                                    <h2><span style="color:gray;">Hora actual en</span>Bogotá, Colombia</h2>
+                                    <div id="bogotaDate" class="dateLabel" style="font-size:1.5em;"></div>
+                                    <div id="bogotaTime" class="timeLabel" style=""></div>
+                                </div>
                             </div>
                             <div class="elemento disabled">
                                <h2>Clima</h2>
@@ -108,7 +112,7 @@
                                     </div>
                                     <div class="container">
                                         <div id="weather" class="grid"></div>
-                                        <h3>Pronostico:</h3>
+                                        <h3>Pronóstico:</h3>
                                         <div id="forecast" class="grid"></div>
                                     </div>
                                     <div class="container">
@@ -141,7 +145,7 @@
                                <img src="resources/img/gastro07.jpg">
                                <p>Es algo así como la paella de fama mundial, pero sólo mariscos pollo, su consistencia es similar y se prepara con arroz, guisantes, zanahoria, pimentón, cebolla, chorizo y frijoles, se pueden encontrar en cualquier región de Colombia.</p>
                                <h6>8. LA CHIQUITA ZAMORRA:</h6>
-                               <img src="resources/img/gastro08.jpg">
+                               
                                <p>Una vez más una sopa, siendo una preparación cundiboyasense toma algunas de las cosas que se cultivan en la región como habas, nabos, cubios entre otras cosas, la carne que hizo que el plato es la carne de callos sopa que aunque muy diferentes de sus ingredientes tiene un sabor delicioso.</p>
                                <h6>9. FLANCO:</h6>
                                <img src="resources/img/gastro09.jpg">
@@ -155,23 +159,23 @@
                                 <h2>Código de Vestimenta</h2>
                                 <br>
                                 <p><b>Día 1:</b> Conferencias</p>
-                                <p>Business Casual</p>
-                                <p>Mujeres: Traje sastre o pantalón/falda de vestir.</p>
-                                <p>Hombres: Pantalón de vestir, camisa, zapato o mocasín.</p>
+                                <p><i>Business Casual</i></p>
+                                <p><b>Mujeres:</b> Traje sastre o pantalón/falda de vestir.</p>
+                                <p><b>Hombres:</b> Pantalón de vestir, camisa, zapato o mocasín.</p>
                                 <br>
                                 <hr>
                                 <p><b>Día 2:</b> Visita a Colegios</p>
-                                <p>Mujeres y hombres: Vestimenta formal (apropiada).</p>
-                                <p>NO JEANS- NO TENNIS</p>
+                                <p><b>Mujeres y hombres:</b> Vestimenta formal (apropiada).</p>
+                                <p><i>NO JEANS- NO TENNIS</i></p>
                                 <br>
                                 <hr>
                                 <p><b>Día 3:</b> Recorrido Turístico</p>
-                                <p>Ropa cómoda</p>
-                                <p>Sugerencias: Llevar abrigo, paraguas.</p>
+                                <p><i>Ropa cómoda</i></p>
+                                <p><b>Sugerencias:</b> Llevar abrigo, paraguas.</p>
                                 <br>
                                 <hr>
                                 <p><b>Día 4:</b> Regreso a destinos</p>
-                                <p>Vestimenta libre</p>
+                                <p><i>Vestimenta libre</i></p>
                             </div>
                             <div class="elemento disabled">
                                <h2>Revisa los términos y políticas de equipaje para:</h2>
@@ -190,8 +194,7 @@
                     <div class="slideWrapper" style="height:100%;">
                         <div id="passworContainer">
                             <img id="" class="" src="resources/img/logo.svg">
-                            <p>Para registrarte haz clic aquí:</p>
-                            <input id="button" type="button" value="Registrarse" onclick="registro()">
+                            <input id="button" type="button" value="Haz clic aquí para registrarte:" onclick="registro()">
                         </div>
                     </div>
                 </section>
@@ -202,7 +205,7 @@
                 </div>
                 <div class="menu">
                     <p></p>
-                    <p onclick="goTo(slides,1)">Travesía</p>
+                    <p onclick="goTo(slides,1)">Introducción</p>
                     <p onclick="goTo(slides,2)">Bogotá</p>
                     <p onclick="goTo(slides,3)">Hotel Sede</p>
                     <p onclick="goTo(slides,4)">Datos Importantes</p>

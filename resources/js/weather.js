@@ -107,14 +107,14 @@ function weather( cityId, el ) {
       return item.number == condition.code;
     });
 
-    container.innerHTML = `<h2>${location.city}, ${location.region}</h2>`
+    container.innerHTML = '<h2>Bogotá, Distrito Especial</h2>';
 
     // current weather
     let today = document.createElement('div');
     today.classList.add('block', 'today');
     today.innerHTML = `<i class="wi ${result[0].class}"></i>
         <div class="weather type-small">
-          <h3>Today</h3>
+          <h3>Today:</h3>
           <p>Currently ${condition.temp} &deg;C., and ${result[0].description}</p>
           <p>
             Sunrise: ${astronomy.sunrise} <br>
