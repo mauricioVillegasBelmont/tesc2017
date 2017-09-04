@@ -1,0 +1,471 @@
+html,body{
+    width:  100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body *{
+    box-sizing: border-box;
+    
+    -webkit-transition: all 1.5s ease; /* Safari */
+            transition: all 1.5s ease;
+}
+img{
+    width: auto;
+    height: auto;
+}
+section{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 5% 1%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+section:first-child{
+    padding: 0;
+}
+
+section::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #EEC559;
+}
+
+section::-webkit-scrollbar
+{
+	width: 15px;
+	background-color: #F5F5F5;
+}
+
+section::-webkit-scrollbar-thumb
+{
+	background-color: #435FA8;
+}
+.floatLayout *{
+    float: left;
+}
+.floatLayout .slideWrapper span,.floatLayout .slideWrapper p b,.floatLayout .slideWrapper p i{
+    float: none;
+}
+.floatLayout .slideWrapper p span{
+    float: none;
+}
+
+
+
+h1,
+h2,
+h3 {
+    font-family: 'header';
+    font-size: 2em;
+    color: #EEC559;
+}
+h4,
+h5,
+h6 {
+    font-family: 'header';
+    font-size: 1.5em;
+    color: #EEC559;
+}
+aside h1,
+aside h2,
+aside h3{
+    position: relative;
+    left: -45px;
+    padding-left: 45px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #B9007C;
+    color: #fff;
+    -webkit-border-radius: 0px 10px 10px 0px;
+    -moz-   border-radius: 0px 10px 10px 0px;
+            border-radius: 0px 10px 10px 0px;
+}
+aside h1 span, h1 span,
+aside h2 span, h2 span,
+aside h3 span, h3 span,
+h4 span,
+h5 span,
+h6 span{
+    display: block;
+    font-size: 80%;
+}
+p, li{
+    font-family: 'body';
+    font-size: 1em;
+}
+
+p .boldItalic, li .boldItalic{
+    font-family: 'body';
+    font-size: 100%;
+    font-weight: bold;
+    font-style: italic;
+}
+#portada *{
+    -webkit-transition: all 5s ease; /* Safari */
+            transition: all 5s ease;
+}
+#mainWrapper{
+    position: relative;
+    cursor: pointer;
+}
+#mainWrapper.active{
+    cursor: auto;
+}
+#mainWrapper{
+    width:  100%;
+    height: 100%;
+}
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    max-height: 50px;
+    z-index: 1000;
+    opacity: 0;
+}
+#header div{
+    height: 100%;
+}
+#header div:first-child{
+    width: 60%;
+    float: left;
+}
+#header div.menu{
+    width: 40%;
+    float: left;
+}
+#header div.menu p{
+    border-left: 1px solid #fff;
+    cursor: pointer;
+    float: left;
+}
+#header .menu p:hover{
+    text-decoration: underline;
+}
+#header .menu p.current{
+    color: #eec559;
+    text-decoration: underline;
+}
+#header  p{
+    float: right;
+    color: #fff;
+    padding: 0 1%;
+}
+#header #headerLogo{
+    display: none;
+}
+.active #header{
+    height: 50px;
+    display: block;
+    background-color: #546679;    
+    opacity: 1;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.3);
+    -moz-   box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.3);
+            box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.3);
+}
+
+
+
+#body{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+.active #body{
+    
+}
+.slideWrapper{
+    position: relative;
+    min-width: 900px;
+    max-width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.capitalLeter{
+    width: 20%;
+}
+.bodyText{
+    width: 80%;
+    text-align: justify;
+}
+.bullet {
+    width: 75%;
+    height: auto;
+    min-height: 15%;
+}
+.mainLayout{
+    
+}
+.mainWrapper{
+    background-color: cadetblue;
+}
+/*------------inner info-------------*/
+.info{
+    background-color: #6DAFDE;
+}
+#mainLogo{
+    width: 50%;
+    max-height: 70%;
+    position: absolute;
+    top: 10%;
+    right:7%
+}
+.bgImages{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%
+}
+.animated.bgImages{
+    left: 0 !important;
+}
+.unanimated.bgImages{
+    left: -300% !important;;
+}
+#mainLogo.unanimated{
+    right: -300% !important;
+}
+#clickImg{
+    position: absolute;
+    right:7%;
+    bottom: 5%;
+    height: 10%;
+    opacity: 1;
+}
+#clickImg.unanimated{
+    right: -300% !important;;
+}
+.active #clickImg{
+    opacity: 0;
+}
+
+
+
+.content{
+    position: absolute;
+    height: 95%;
+}
+
+
+#inflog{
+    left: 2%;
+    top: 0;
+    width: 40%;
+}
+#agenda{
+    right: 20%;
+    top: 5%;
+    height: 95%;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+.video{
+    position: absolute;
+    top:50px;
+    left: 50%;
+    width: 100%;
+    min-width: 900px;
+    height: 92%;
+    display: block;
+    margin: 0 auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-    transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+}
+#bogota{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+    -webkit-transform: translateX(-50%);
+    -ms-    transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+#sede .slideWrapper, #loQueDebes .slideWrapper{
+    top: -7%;
+}
+.verticalMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:25%; 
+    height:500px;
+    background: url(../img/menuBG.svg) bottom left/cover no-repeat;
+    padding: 2% 5%;
+}
+.verticalMenu h5{
+    color: #fff;
+}
+.verticalMenu ul{
+    list-style-image: url(../img/ul.svg);
+}
+.verticalMenu li{
+    cursor: pointer;
+    color: #fff;
+}
+.verticalMenu li.current{
+    color: #EEC559;
+}
+.verticalMenu li:hover{
+    text-decoration: underline;
+}
+.elementos{
+    position: absolute;
+    left: 25%;
+    top: 6%;
+    width: 75%;
+    height: 100%;
+    min-height: 750px;
+    padding: 2%;
+}
+.elementos .elemento{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    width:  100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #fff;
+}
+.elemento.disabled{
+    opacity: 0;
+}
+.elemento img{
+    width: 100%;
+    height: auto
+}
+/*buttons*/
+.horizontalNav{
+    display: none;
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    z-index: 1000;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -ms-    transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.active .horizontalNav{
+    display: block;
+}
+#sig.horizontalNav{
+    right: 2%;
+}
+#ant.horizontalNav{
+    left: 2%;
+}
+.disabled{
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+
+
+/*SLIDE TRANSITIONS*/
+section.prev{
+    -webkit-transform: rotateY(-150deg); /* Safari */
+            transform: rotateY(-150deg);
+    left: -110%;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+    
+}
+section.current{
+    left: 0;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: all;
+    -webkit-transform: rotateY(0deg); /* Safari */
+            transform: rotateY(0deg);
+}
+section.next{
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+
+
+#start {
+    position: absolute;
+    top:  0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: none;
+    cursor: pointer;
+}
+
+#scrollButton {
+    position: fixed;
+    bottom: 50px;
+    right:  50px;
+    width: 5%;
+    max-width: 50px;
+    height: auto;
+    opacity: 0;
+    z-index: 1000;
+    pointer-events: none;
+    cursor: default;
+}
+#scrollButton.active{
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: all;
+}
+/*registro*/
+#passworContainer{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 40%;
+    min-width: 400px;
+    height: 100%;
+    text-align: center;
+    -webkit-transform:  translateX(-50%);
+    -ms-    transform:  translateX(-50%);
+            transform:  translateX(-50%);
+}
+#passworContainer img{
+    height: 80%;
+}
+#passworContainer p{
+    color:#fff;
+}
+#passworContainer #button{
+    border: none;
+    background-color: #eec559;
+    padding: 6px;
+    color:#fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#button:hover{
+    -webkit-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
+    -moz-   box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
+            box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
+}
