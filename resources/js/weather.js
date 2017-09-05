@@ -107,7 +107,7 @@ function weather( cityId, el ) {
       return item.number == condition.code;
     });
 
-    container.innerHTML = '<h2>Bogotá, Distrito Especial</h2>';
+    container.innerHTML = '<h3>Bogotá, Distrito Especial</h3>';
 
     // current weather
     let today = document.createElement('div');

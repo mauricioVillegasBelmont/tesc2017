@@ -20,7 +20,7 @@
             <div id="body" class="">
                 <section id="portada" class="no-overflow info">
                     <img class="bgImages unanimated" style="" src="resources/img/planeYellow.svg">
-                    <div class="slideWrapper">
+                    <div class="slideWrapper" style="top: 0;">
                         <img id="mainLogo" class="unanimated" src="resources/img/main_logo.svg">
                         <img id="clickImg" class="unanimated" src="resources/img/clickToContinue.svg">
                     </div>
@@ -40,8 +40,39 @@
                    </div>
                 </section>
                 <section id="sede" class="info ">
-                    <div class="slideWrapper" style="height:auto;">
+                    <div class="slideWrapper" style="height:100%;">
                         
+                        <div class="main elementos">
+                            <h2>Hilton Bogotá</h2>
+                            <h4>DETALLES DEL HOTEL</h4>
+                            <embed id="hotelHiltonVideo" src="https://www.youtube.com/v/wyjhDIn2d8s">
+                            <p>Disfrute de la ubicación céntrica y del elegante ambiente del hotel Hilton Bogota. Ubicado en el centro del distrito financiero, el hotel se encuentra cerca la Zona Rosa, uno de los vecindarios más prestigiosos de la ciudad y de la Zona G, que ofrece entretenimiento y restaurantes. Llegue al hotel desde el Aeropuerto Internacional El Dorado en solo 25 minutos.</p>
+                            <p>Descanse en una habitación moderna con WiFi, escritorio y comodidades. Elija una suite para disfrutar de un ambiente sofisticado y espacio adicional en la sala de estar con un sofá. Hospédese en una habitación o una suite Executive para tener acceso a los privilegios exclusivos de la sala de estar ejecutiva.</p>
+                        </div>
+                        <div class="verticalMenu">
+                            <h4>CARACTERÍSTICAS DEL HOTEL</h4>
+                            <ul>
+                                <li>Hotel de Bogotá en Carrera n.º 7, el corazón del distrito financiero de la ciudad</li>
+                                <li>A pocos pasos de las zonas Rosa y T (zona de entretenimiento) y la zona G (zona de restaurantes)</li>
+                                <li>Modernas instalaciones para reuniones con 930 metros cuadrados/10.000 pies cuadrados de espacio para eventos; WiFi en todo el hotel</li>
+                                <li>El hotel cuenta con un restaurante elegante, un bar y un café exótico estilo botica</li>
+                                <li>Gimnasio completamente equipado y piscina climatizada al aire libre</li>
+                                <li>Café exótico estilo antigua botica</li>
+                            </ul>
+                            <h4>REUNIONES Y EVENTOS</h4>
+                            <p>Hilton Bogotá le permite organizar reuniones productivas y exitosas, con los altos estándares de servicio que solo Hilton puede ofrecer a sus clientes.</p>
+                            <ul>
+                                <li>Instalaciones modernas y multifuncionales con tecnología avanzada que permite llevar un registro digital de las reuniones, los mejores dispositivos de audio, y conectividad en video y telecomunicaciones</li>
+                                <li>Un salón de fiestas con capacidad para 500 personas, además de salas de reuniones con áreas de trabajo para grupos pequeños con luz natural y espacios al aire libre</li>
+                                <li>Un solo punto de contacto que satisfará todos sus requisitos relacionados con el servicio y el soporte técnico</li>
+                                <li>Servicio de conserjería</li>
+                                <li>Gimnasio en el hotel</li>
+                                <li>Acceso a Internet por cable en las habitaciones</li>
+                                <li>Wi-Fi en las habitaciones</li>
+                                <li>Piscina en el hotel</li>
+                                <li>Restaurante en el hotel</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <section id="loQueDebes" class="info ">
@@ -219,7 +250,7 @@
                 <div class="logo">
                     <img style="max-height:80%; margin:10px 50px; float:left;" src="resources/img/logo_header-09.svg" onclick="goTo(slides,0)">
                 </div>
-                <div></div>
+                <div class="spacer"></div>
                 <div class="menu">
                     <p></p>
                     <p onclick="goTo(slides,1)">Introducción</p>
@@ -239,10 +270,17 @@
         <script type="text/javascript" src="resources/js/moment-timezone-with-data.js"></script>-->
         <script>
           function initMap() {
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: {lat: 4.609866, lng: -74.08205}
-              });
+                //var hiltonBogota = {lat: 4.654624, lng: -74.055089};
+                var hiltonBogota = {lat: 4.6558871, lng: -74.0553982};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 16,
+                    center: hiltonBogota
+                });
+                var marker = new google.maps.Marker({
+                    position: hiltonBogota,
+                    map: map,
+                    title: 'HILTON BOGOTA'
+                });
             }
         </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHqrvz24b_cgRkpLH1AUm2-UBjcEDas30&callback=initMap&language=es&region=mx"
