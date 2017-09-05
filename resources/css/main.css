@@ -338,7 +338,7 @@ p .boldItalic, li .boldItalic{
     color: #fff;
 }
 .verticalMenu ul{
-    list-style-image: url(../img/ul.svg);
+    list-style-image: disc;
 }
 .verticalMenu li{
     cursor: pointer;
