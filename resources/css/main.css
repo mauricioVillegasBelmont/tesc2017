@@ -130,25 +130,37 @@ p .boldItalic, li .boldItalic{
     top: 0;
     left: 0;
     width: 100%; 
-    max-height: 50px;
+    height: 10%;
     z-index: 1000;
     opacity: 0;
 }
 #header div{
     height: 100%;
-}
-#header div:first-child{
-    width: 60%;
     float: left;
 }
+#header div:nth-child(2){
+    width:  30%;
+}
+#header div:first-child{
+    width: 20%;
+}
 #header div.menu{
-    width: 40%;
+    width: 50%;
     float: left;
 }
 #header div.menu p{
     border-left: 1px solid #fff;
     cursor: pointer;
     float: left;
+    padding: 1% 2%;
+    color: #fff;
+}
+#header div.menu p:first-child{
+    width: 0;
+    
+}
+#header div.menu p:first-child,#header div.menu p:nth-child(2){
+    border-left: none;
 }
 #header .menu p:hover{
     text-decoration: underline;
@@ -157,16 +169,22 @@ p .boldItalic, li .boldItalic{
     color: #eec559;
     text-decoration: underline;
 }
+#header .logo img{
+    cursor: pointer;
+}
+/*
+
 #header  p{
     float: right;
     color: #fff;
-    padding: 0 1%;
 }
+
+*/
 #header #headerLogo{
     display: none;
 }
 .active #header{
-    height: 50px;
+    height: 10%;
     display: block;
     background-color: #546679;    
     opacity: 1;
@@ -190,6 +208,7 @@ p .boldItalic, li .boldItalic{
 }
 .slideWrapper{
     position: relative;
+    top: 7%;
     min-width: 900px;
     max-width: 80%;
     height: 100%;
@@ -269,9 +288,9 @@ p .boldItalic, li .boldItalic{
     width: 40%;
 }
 #agenda{
-    right: 20%;
-    top: 5%;
-    height: 95%;
+    right: 5%;
+    top: -7%;
+    height: 107%;
 }
 
 #map{
@@ -304,14 +323,14 @@ p .boldItalic, li .boldItalic{
 }
 
 #sede .slideWrapper, #loQueDebes .slideWrapper{
-    top: -7%;
+    top: 0;
 }
 .verticalMenu{
     position: absolute;
     top: 0;
     left: 0;
     width:25%; 
-    height:500px;
+    height:700px;
     background: url(../img/menuBG.svg) bottom left/cover no-repeat;
     padding: 2% 3%;
 }

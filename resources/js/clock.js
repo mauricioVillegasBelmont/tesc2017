@@ -99,6 +99,9 @@ function ClockFace()
 	ctx.fill();
 	ctx.closePath();
 	var hours=12;
+    var rad = canvas.width/2;
+    var textX = canvas.width/8;
+    var textY = canvas.width/8;
 	for (var i= 0; i < 60; i++) 
 	{
 		ctx.lineCap= "square";
@@ -109,8 +112,9 @@ function ClockFace()
 		ctx.translate(0, -clockWidth / 2);
 		if ((i % 5) == 0) 
 		{
+            
 			ctx.fillStyle= "#ffffff";
-			ctx.font="30px sans-serif";
+			ctx.font="1.5em sans-serif";
 			if(hours==3) 
 			{
 				ctx.rotate(i * Math.PI/-30);
@@ -143,6 +147,7 @@ function ClockFace()
 				else
 					ctx.fillText(hours,-15,30);
 			}
+            
 			if(hours==12) 
             hours=0;
 			hours++;
@@ -159,7 +164,26 @@ function ClockFace()
 		ctx.stroke();
 		ctx.restore();
 	}
-} 
+}
+
+function drawNumber(ctx, radius){
+  var ang;
+  var num;
+  ctx.font = radius*0.15+ "px Arial";
+  ctx.textBaseline = "middle";
+  ctx.textAlign = "center";
+  
+  for(num = 1; num < 13; num++){
+    ang = num*Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(),0,0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
 
 function drawClockHand(length, angle) 
 {
@@ -208,3 +232,86 @@ function ananlogClock()
 	setInterval(onDrawTime, 1000);
 } // initializeClock()
 onload= ananlogClock;
+/*var c = document.getElementById("analog_clock");
+var ctx = c.getContext("2d");
+var radius = c.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock(){
+  drawFace(ctx, radius);
+  drawNumber(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius){
+  
+  ctx.beginPath();
+  ctx.arc(0,0,radius,0,2*Math.PI);
+  ctx.fillStyle = "#333";
+  ctx.fill();
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumber(ctx, radius){
+  var ang;
+  var num;
+  ctx.font = radius*0.15+ "px Arial";
+  ctx.textBaseline = "middle";
+  ctx.textAlign = "center";
+  ctx.fillStyle = 'white';
+  for(num = 1; num < 13; num++){
+    ang = num*Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(),0,0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+    //for(var i=0;i < 60;i++){
+    //    if ((i % 5) != 0){
+    //        ang = i*Math.PI / 30;
+    //        ctx.rotate(ang);
+    //        ctx.translate(0, -radius*0.85);
+    //        
+	//		ctx.lineWidth= 1;
+	//		ctx.lineTo(0, -radius*0.5);
+    //        ctx.strokeStyle= "#666999";
+    //        
+    //    }
+    //}
+}
+
+function drawTime(ctx, radius){
+  var now = new Date();
+  var hour = now.getHours();
+  var minute = now.getMinutes();
+  var second = now.getSeconds();
+  
+  hour = hour%12;
+  hour = (hour*Math.PI/6) + (minute*Math.PI/6/60) + (second*Math.PI/6/60/60);
+  drawHand(ctx, hour, radius*0.5, radius*0.07);
+  drawHand(ctx, minute*Math.PI/30, radius*0.8, radius*0.03);
+  drawHand(ctx, second*Math.PI/30, radius*0.9, radius*0.01);
+}
+
+function drawHand(ctx, pos, length, width){
+  ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}*/
