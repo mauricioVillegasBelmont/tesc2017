@@ -331,6 +331,12 @@ p .boldItalic, li .boldItalic{
     -ms-    transform: translateX(-50%);
             transform: translateX(-50%);
 }
+#videoBogota .slideWrapper #videoLogo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+}
 
 #sede .slideWrapper, #loQueDebes .slideWrapper{
     top: 0;
