@@ -221,3 +221,4 @@ document.addEventListener('DOMContentLoaded', function(){
     sig.addEventListener('click',function(){horizontalNav(sig,1)} ,false);
     playAnimation();
 }, false);
+
