@@ -57,7 +57,7 @@ section::-webkit-scrollbar-thumb
 h1,
 h2{
     font-family: 'header';
-    font-size: 2em;
+    font-size: 2.2em;
     color: #EEC559;
 }
 
@@ -382,15 +382,26 @@ p .boldItalic, li .boldItalic{
     left: 0;
     padding-left: 5%;
     padding-bottom: 2%;
-    width: 95%;
+    width: 100%;
     height: auto;
     min-height: 100%;
-    background-color: #fff;
+    background:  #fff url(../img/test.png) top left/contain no-repeat;
     -webkit-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
     -moz-   box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
             box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
 }
-
+.elementos .elemento h2{
+    position: relative;
+    left: -5%;
+    width: auto;
+    max-width: 50%;
+    padding: 1% 1% 1% 5%;
+    color: #435fa8;
+    /*background: -moz-linear-gradient(left, rgba(204,51,49,1) 70%, rgba(238,197,89,0) 100%); */
+    /*background: -webkit-linear-gradient(left, rgba(204,51,49,1) 70%,rgba(238,197,89,0) 100%); */
+    /*background: linear-gradient(to right, rgba(204,51,49,1) 70%,rgba(238,197,89,0) 100%); */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc3331', endColorstr='#00eec559',GradientType=1 ); */
+}
 .elemento.disabled{
     opacity: 0;
     height: 100%;
@@ -552,7 +563,7 @@ section.next{
             box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
 }
 #sede .main #hotelHiltonVideo{
-    width: 100%;
+    width: 95%;
     min-height: 500px;
     height: auto;
 }
