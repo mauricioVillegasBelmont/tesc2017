@@ -4,7 +4,7 @@ var ant  = document.getElementById('ant');
 var sig  = document.getElementById('sig');
 var slideIndex = 0;
 var video = document.getElementById('bogota');
-
+var videoDescription = document.getElementById('videoDescription');
 //var scrollButton = document.getElementById('scrollButton');
 //var scrollInterval = function(){ 
 //    document.body.scrollTop = document.body.scrollHeight;
@@ -29,6 +29,10 @@ function playAnimation(){
     }
 }
 
+videoDescription.onclick= function() {
+    videoDescription.setAttribute('style', 'right:-500%;');
+    //console.log('clicked me');
+}
 
 
 
@@ -50,6 +54,7 @@ function pageIndex(){
         index = getChildIndex(thisPage);
         if(index == 2){
             video.play();
+            videoDescription.setAttribute('style', 'right:0;');
         }else{
             video.pause();
         }
