@@ -356,16 +356,19 @@ p .boldItalic, li .boldItalic{
 .verticalMenu ul{
     list-style-image: disc;
 }
-.verticalMenu li{
+.verticalMenu li, .verticalMenu p{
     cursor: pointer;
     color: #fff;
     font-size: 1.5em;
+   
 }
 .verticalMenu li.current{
     color: #EEC559;
 }
 .verticalMenu li:hover{
     text-decoration: underline;
+}
+.verticalMenu p{
 }
 .elementos{
     position: absolute;
@@ -389,6 +392,9 @@ p .boldItalic, li .boldItalic{
     -webkit-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
     -moz-   box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
             box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
+}
+.elemento p{
+    text-align: justify;
 }
 .elementos .elemento h2{
     position: relative;
@@ -576,4 +582,6 @@ section.next{
 #sede .verticalMenu li, #sede .verticalMenu p{
     color: #fff;
     font-size: 1em;
+    cursor: auto;
+    pointer-events: none;
 }
