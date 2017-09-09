@@ -30,7 +30,7 @@ function playAnimation(){
 }
 
 videoDescription.onclick= function() {
-    videoDescription.setAttribute('style', 'right:-500%;');
+    videoDescription.classList.toggle('active');
     //console.log('clicked me');
 }
 
